@@ -1,0 +1,174 @@
+.
+├── bin
+│   └── main
+│       └── frc
+│           └── robot
+│               ├── commands
+│               │   └── ExampleCommand.class
+│               ├── Constants.class
+│               ├── Main.class
+│               ├── Robot.class
+│               ├── RobotContainer.class
+│               └── subsystems
+│                   └── ExampleSubsystem.class
+├── build
+│   ├── classes
+│   │   └── java
+│   │       └── main
+│   │           └── frc
+│   │               └── robot
+│   │                   ├── commands
+│   │                   │   └── ExampleCommand.class
+│   │                   ├── Constants.class
+│   │                   ├── Main.class
+│   │                   ├── Robot.class
+│   │                   ├── RobotContainer.class
+│   │                   └── subsystems
+│   │                       └── ExampleSubsystem.class
+│   ├── generated
+│   │   └── sources
+│   │       └── annotationProcessor
+│   │           └── java
+│   │               └── main
+│   ├── libs
+│   │   └── NewProject.jar
+│   └── tmp
+│       ├── compileJava
+│       ├── expandedArchives
+│       │   ├── cscore-cpp-2020.2.2-windowsx86-64.zip_96f5445c7536afd5d4b29f6b62beb7c5
+│       │   │   └── windows
+│       │   │       └── x86-64
+│       │   │           └── shared
+│       │   │               ├── cscore.dll
+│       │   │               └── cscorejni.dll
+│       │   ├── hal-cpp-2020.2.2-windowsx86-64.zip_a06e416e0ef6f731f60ae7fe8dc3ff4d
+│       │   │   └── windows
+│       │   │       └── x86-64
+│       │   │           └── shared
+│       │   │               ├── wpiHal.dll
+│       │   │               └── wpiHaljni.dll
+│       │   ├── ntcore-cpp-2020.2.2-windowsx86-64.zip_d9b86f7517ae738ee0ebaeb62e61616d
+│       │   │   └── windows
+│       │   │       └── x86-64
+│       │   │           └── shared
+│       │   │               ├── ntcore.dll
+│       │   │               └── ntcorejni.dll
+│       │   ├── opencv-cpp-3.4.7-2-windowsx86-64.zip_c1b4afe02f1d1728ff01a21481793f4b
+│       │   │   └── windows
+│       │   │       └── x86-64
+│       │   │           └── shared
+│       │   │               ├── opencv_calib3d347.dll
+│       │   │               ├── opencv_core347.dll
+│       │   │               ├── opencv_features2d347.dll
+│       │   │               ├── opencv_flann347.dll
+│       │   │               ├── opencv_highgui347.dll
+│       │   │               ├── opencv_imgcodecs347.dll
+│       │   │               ├── opencv_imgproc347.dll
+│       │   │               ├── opencv_java347.dll
+│       │   │               ├── opencv_ml347.dll
+│       │   │               ├── opencv_objdetect347.dll
+│       │   │               ├── opencv_photo347.dll
+│       │   │               ├── opencv_shape347.dll
+│       │   │               ├── opencv_stitching347.dll
+│       │   │               ├── opencv_superres347.dll
+│       │   │               ├── opencv_video347.dll
+│       │   │               ├── opencv_videoio347.dll
+│       │   │               └── opencv_videostab347.dll
+│       │   └── wpiutil-cpp-2020.2.2-windowsx86-64.zip_f9d55aeb598fab1918e404962bb83f74
+│       │       └── windows
+│       │           └── x86-64
+│       │               └── shared
+│       │                   ├── wpiutil.dll
+│       │                   └── wpiutiljni.dll
+│       ├── jar
+│       │   └── MANIFEST.MF
+│       └── jniExtractDir
+│           ├── cscore.dll
+│           ├── cscorejni.dll
+│           ├── ntcore.dll
+│           ├── ntcorejni.dll
+│           ├── opencv_calib3d347.dll
+│           ├── opencv_core347.dll
+│           ├── opencv_features2d347.dll
+│           ├── opencv_flann347.dll
+│           ├── opencv_highgui347.dll
+│           ├── opencv_imgcodecs347.dll
+│           ├── opencv_imgproc347.dll
+│           ├── opencv_java347.dll
+│           ├── opencv_ml347.dll
+│           ├── opencv_objdetect347.dll
+│           ├── opencv_photo347.dll
+│           ├── opencv_shape347.dll
+│           ├── opencv_stitching347.dll
+│           ├── opencv_superres347.dll
+│           ├── opencv_video347.dll
+│           ├── opencv_videoio347.dll
+│           ├── opencv_videostab347.dll
+│           ├── wpiHal.dll
+│           ├── wpiHaljni.dll
+│           ├── wpiutil.dll
+│           └── wpiutiljni.dll
+├── build.gradle
+├── .classpath
+├── .gitignore
+├── gradle
+│   └── wrapper
+│       ├── gradle-wrapper.jar
+│       └── gradle-wrapper.properties
+├── .gradle
+│   ├── 6.0.1
+│   │   ├── executionHistory
+│   │   │   ├── executionHistory.bin
+│   │   │   └── executionHistory.lock
+│   │   ├── fileChanges
+│   │   │   └── last-build.bin
+│   │   ├── fileContent
+│   │   │   └── fileContent.lock
+│   │   ├── fileHashes
+│   │   │   ├── fileHashes.bin
+│   │   │   ├── fileHashes.lock
+│   │   │   └── resourceHashesCache.bin
+│   │   ├── gc.properties
+│   │   ├── javaCompile
+│   │   │   ├── classAnalysis.bin
+│   │   │   ├── jarAnalysis.bin
+│   │   │   ├── javaCompile.lock
+│   │   │   └── taskHistory.bin
+│   │   └── vcsMetadata-1
+│   ├── buildOutputCleanup
+│   │   ├── buildOutputCleanup.lock
+│   │   ├── cache.properties
+│   │   └── outputFiles.bin
+│   └── vcs-1
+│       └── gc.properties
+├── gradlew
+├── gradlew.bat
+├── .project
+├── .settings
+│   └── org.eclipse.buildship.core.prefs
+├── settings.gradle
+├── src
+│   └── main
+│       ├── deploy
+│       │   └── example.txt
+│       └── java
+│           └── frc
+│               └── robot
+│                   ├── commands
+│                   │   └── ExampleCommand.java
+│                   ├── Constants.java
+│                   ├── Main.java
+│                   ├── RobotContainer.java
+│                   ├── Robot.java
+│                   └── subsystems
+│                       └── ExampleSubsystem.java
+├── tree.txt
+├── vendordeps
+│   └── WPILibNewCommands.json
+├── .vscode
+│   ├── launch.json
+│   └── settings.json
+└── .wpilib
+    └── wpilib_preferences.json
+
+69 directories, 102 files
