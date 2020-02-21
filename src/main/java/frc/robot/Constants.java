@@ -16,4 +16,38 @@ package frc.robot;
  * constants are needed, to reduce verbosity.
  */
 public final class Constants {
+
+  //PWM
+
+  //DIO
+
+  //CAN
+  public static final int krightMasterPort = 1;
+  public static final int krightSlavePort = 2;
+  public static final int kleftMasterPort = 3;
+  public static final int kleftSlavePort = 4;
+  public static final int kliftport = 5;
+  public static final int kwinchport = 7;
+  public static final int kintakeport = 6;
+  public static final int krampport = 8;
+
+  //USB
+  public static final int kdriverstickPort = 0;
+  public static final int koperatorstickPort = 1;
+  public static final int cameraPort = 1;
+  public static final int rampcameraPort = 0;
+
+
+  //Buttons
+  public static final int kwinchRaise = 4;
+  public static final int kintakeForward = 11;
+  public static final int kintakeReverse = 12;
+  public static final int kramp = 2;
+  public static final int krampReverse = 6;
+  public static final int kelevatorRaise = 5;
+  public static final int kelevatorLower= 3;
+  public static final int krampeject= 1;
+  
+  //Other Drivetrain Constants
+  public static final int kwheelDiameter = 6;
 }
