@@ -30,6 +30,8 @@ public final class Constants {
   public static final int kwinchport = 7;
   public static final int kintakeport = 6;
   public static final int krampport = 8;
+  public static final int kspinnerport = 9;
+  public static final int kspinningrainbowport = 10;
 
   //USB
   public static final int kdriverstickPort = 0;
@@ -47,6 +49,10 @@ public final class Constants {
   public static final int kelevatorRaise = 5;
   public static final int kelevatorLower= 3;
   public static final int krampeject= 1;
+  public static final int kspinnerUp= 7;
+  public static final int kspinnerDown= 8;
+  public static final int kspinningrainbowOn= 9;
+  public static final int kspinningrainbowOff= 10;
   
   //Other Drivetrain Constants
   public static final int kwheelDiameter = 6;

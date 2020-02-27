@@ -21,6 +21,8 @@ import frc.robot.subsystems.DriveSubsystem;
 import frc.robot.subsystems.IntakeSubsystem;
 import frc.robot.subsystems.ElevatorSubsystem;
 import frc.robot.subsystems.RampSubsystem;
+import frc.robot.subsystems.SpinnerSubsystem;
+import frc.robot.subsystems.SpinningRainbowSubsystem;
 import frc.robot.subsystems.WinchSubsystem;
 import frc.robot.commands.AutoCommand1;
 
@@ -39,6 +41,8 @@ public class RobotContainer {
   private final IntakeSubsystem m_intakeSubsystem = new IntakeSubsystem();
   private final RampSubsystem m_rampSubsystem = new RampSubsystem();
   private final WinchSubsystem m_winchSubsystem = new WinchSubsystem();
+  private final SpinnerSubsystem m_spinnerSubsystem = new SpinnerSubsystem();
+  private final SpinningRainbowSubsystem m_spinningrainbowSubsystem = new SpinningRainbowSubsystem();
 
 
   // setup autonomous
@@ -131,6 +135,29 @@ public class RobotContainer {
       new InstantCommand(m_winchSubsystem::stop, m_winchSubsystem) 
     );
 
+    new JoystickButton(operatorstick, Constants.kspinnerUp).whenPressed(
+      new InstantCommand(m_spinnerSubsystem::spinnerUp, m_spinnerSubsystem)
+    ).whenReleased(
+      new InstantCommand(m_spinnerSubsystem::stop, m_spinnerSubsystem)
+    );
+
+    new JoystickButton(operatorstick, Constants.kspinnerDown).whenPressed(
+      new InstantCommand(m_spinnerSubsystem::spinnerDown, m_spinnerSubsystem)
+      ).whenReleased(
+      new InstantCommand(m_spinnerSubsystem::stop, m_spinnerSubsystem)
+    );
+
+    new JoystickButton(operatorstick, Constants.kspinningrainbowOn).whenPressed(
+      new InstantCommand(m_spinningrainbowSubsystem::spinningrainbowOn, m_spinningrainbowSubsystem)
+    ).whenReleased(
+      new InstantCommand(m_spinningrainbowSubsystem::stop, m_spinningrainbowSubsystem)
+    );
+
+    new JoystickButton(operatorstick, Constants.kspinningrainbowOff).whenPressed(
+      new InstantCommand(m_spinningrainbowSubsystem::spinningrainbowOff, m_spinningrainbowSubsystem)
+    ).whenReleased(
+      new InstantCommand(m_spinningrainbowSubsystem::stop, m_spinningrainbowSubsystem)
+    );
  }
 
 
