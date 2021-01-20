@@ -22,10 +22,10 @@ public final class Constants {
   //DIO
 
   //CAN
-  public static final int krightMasterPort = 1;
-  public static final int krightSlavePort = 2;
-  public static final int kleftMasterPort = 3;
-  public static final int kleftSlavePort = 4;
+  public static final int krightMasterPort = 3;
+  public static final int krightSlavePort = 4;
+  public static final int kleftMasterPort = 1;
+  public static final int kleftSlavePort = 2;
   public static final int kliftport = 5;
   public static final int kwinchport = 7;
   public static final int kintakeport = 6;

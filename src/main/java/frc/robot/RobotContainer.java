@@ -24,7 +24,9 @@ import frc.robot.subsystems.RampSubsystem;
 import frc.robot.subsystems.SpinnerSubsystem;
 import frc.robot.subsystems.SpinningRainbowSubsystem;
 import frc.robot.subsystems.WinchSubsystem;
-import frc.robot.commands.AutoCommand1;
+import frc.robot.commands.DeployFuel;
+import frc.robot.commands.MoveForward;
+import frc.robot.commands.AutoDoNothing;
 
 
 /**
@@ -34,9 +36,11 @@ import frc.robot.commands.AutoCommand1;
  * (including subsystems, commands, and button mappings) should be declared here.
  */
 public class RobotContainer {
+
+  //private static final Command m_autonomousCommand = null;
   // The robot's subsystems are defined here...
   // private final ExampleSubsystem m_exampleSubsystem = new ExampleSubsystem();
-  private final DriveSubsystem m_driveSubsystem = new DriveSubsystem();
+  public final DriveSubsystem m_driveSubsystem = new DriveSubsystem();
   private final ElevatorSubsystem m_elevatorSubsystem = new ElevatorSubsystem();
   private final IntakeSubsystem m_intakeSubsystem = new IntakeSubsystem();
   private final RampSubsystem m_rampSubsystem = new RampSubsystem();
@@ -45,13 +49,14 @@ public class RobotContainer {
   private final SpinningRainbowSubsystem m_spinningrainbowSubsystem = new SpinningRainbowSubsystem();
 
 
-  // setup autonomous
-  SendableChooser<Command> m_chooser = new SendableChooser<>();
-  private final Command m_simpleAuto = new AutoCommand1();
-
   // sticks
   private final Joystick driverstick = new Joystick(Constants.kdriverstickPort);
   private final Joystick operatorstick = new Joystick(Constants.koperatorstickPort);
+
+
+  // Auto Chooser
+  Command m_autonomousCommand;
+  SendableChooser<Command> m_chooser;
 
   /**
    * The container for the robot.  Contains subsystems, OI devices, and commands.
@@ -65,9 +70,14 @@ public class RobotContainer {
       System.out.println("setDewfaultCommnd");
 
     // Add commands to the autonomous command chooser
-    m_chooser.addOption("Test Auto", m_simpleAuto);
-    m_chooser.addOption("Test Auto", m_simpleAuto);
-    System.out.println("addOption");
+
+
+
+    m_chooser = new SendableChooser<>();
+    m_chooser.addOption("Do nothing", new AutoDoNothing());     
+    m_chooser.addOption("Move forward", new MoveForward(m_driveSubsystem));   
+    m_chooser.addOption("DeployFuel", new DeployFuel(m_driveSubsystem, m_rampSubsystem));  
+    SmartDashboard.putData("Autonomous select", m_chooser);
 
     // Put the chooser on the dashboard
     // Shuffleboard.getTab("Autonomous").add(m_chooser);System.out.println("setDewfaultCommnd");
@@ -167,6 +177,7 @@ public class RobotContainer {
    * @return the command to run in autonomous
    */
   public Command getAutonomousCommand() {
-    return m_chooser.getSelected();
+    m_autonomousCommand = m_chooser.getSelected();
+    return m_autonomousCommand;
   }
 }

@@ -34,9 +34,16 @@ public class DriveSubsystem extends SubsystemBase {
       if (Math.abs(move) < 0.1) move = 0;
       if (Math.abs(turn) < 0.1) turn = 0;
       drive.arcadeDrive(move, turn);
+      
     } 
 
+    public void manualDrive2(double move, double turn) {
+      drive.arcadeDrive(move, turn);   
+     }
+
   public DriveSubsystem() {
+    drive.setSafetyEnabled(false);
+    
   }
 
   @Override

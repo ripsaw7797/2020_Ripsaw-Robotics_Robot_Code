@@ -24,10 +24,10 @@ public class SpinnerSubsystem extends SubsystemBase {
   }
 
   public void spinnerUp(){
-    spinnerMVictorSPX.set(ControlMode.PercentOutput, 0.2);
+    spinnerMVictorSPX.set(ControlMode.PercentOutput, 1);
   }
   public void spinnerDown() {
-    spinnerMVictorSPX.set(ControlMode.PercentOutput, -0.2);
+    spinnerMVictorSPX.set(ControlMode.PercentOutput, -1);
   }
   public void stop(){
     spinnerMVictorSPX.set(ControlMode.PercentOutput, 0);

@@ -25,7 +25,7 @@ public class ElevatorSubsystem extends SubsystemBase {
 
   }
   public void raise(){
-    elevatorVictorSPX.set(ControlMode.PercentOutput, 0.6);
+    elevatorVictorSPX.set(ControlMode.PercentOutput, 0.8);
   }
   public void lower(){
     elevatorVictorSPX.set(ControlMode.PercentOutput, -0.2);

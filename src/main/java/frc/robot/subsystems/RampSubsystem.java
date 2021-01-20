@@ -30,6 +30,9 @@ public class RampSubsystem extends SubsystemBase {
     public void forward(){
       rampVictorSPX.set(ControlMode.PercentOutput, 0.3);
     }
+    public void autoeject(){
+      rampVictorSPX.set(ControlMode.PercentOutput, 0.6);
+    }
     public void stop(){
       rampVictorSPX.set(ControlMode.PercentOutput, 0);
     }
@@ -38,5 +41,16 @@ public class RampSubsystem extends SubsystemBase {
   @Override
   public void periodic() {
     // This method will be called once per scheduler run
+  }
+
+  public void rampVictorSPX(int d) {
+    
+    if (d == 0) {
+      stop();
+    } else if (d == 1) {
+      this.reverse();
+    } else if (d == 2){
+      this.autoeject();
+    }
   }
 }

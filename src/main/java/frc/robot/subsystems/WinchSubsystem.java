@@ -30,7 +30,7 @@ public class WinchSubsystem extends SubsystemBase {
   }
 
   public void winchRaise(){
-    winchMVictorSPX.set(ControlMode.PercentOutput, 0.2);
+    winchMVictorSPX.set(ControlMode.PercentOutput, 1);
   }
   public void stop(){
     winchMVictorSPX.set(ControlMode.PercentOutput, 0);

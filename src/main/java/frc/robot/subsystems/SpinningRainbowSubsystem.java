@@ -24,10 +24,10 @@ public class SpinningRainbowSubsystem extends SubsystemBase {
   }
 
   public void spinningrainbowOn(){
-    spinningrainbowMVictorSPX.set(ControlMode.PercentOutput, 0.2);
+    spinningrainbowMVictorSPX.set(ControlMode.PercentOutput, 0.6);
   }
   public void spinningrainbowOff() {
-    spinningrainbowMVictorSPX.set(ControlMode.PercentOutput, -0.2);
+    spinningrainbowMVictorSPX.set(ControlMode.PercentOutput, -0.6);
   }
   public void stop(){
     spinningrainbowMVictorSPX.set(ControlMode.PercentOutput, 0);

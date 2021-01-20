@@ -10,21 +10,26 @@ package frc.robot.commands;
 import edu.wpi.first.wpilibj.DriverStation;
 import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj2.command.CommandBase;
-import edu.wpi.first.wpilibj2.command.RunCommand;
+//import frc.robot.Robot;
+//import frc.robot.RobotContainer;
 import frc.robot.subsystems.DriveSubsystem;
 
-public class AutoCommand1 extends CommandBase {
+public class MoveForward extends CommandBase {
   /**
    * Creates a new AutoCommand1.
    */
-  private final DriveSubsystem m_driveSubsystem = new DriveSubsystem();
+  // private final DriveSubsystem m_driveSubsystem = new DriveSubsystem();
+
+  private final DriveSubsystem m_driveSubsystem;
 
   private double startTime; 
+  
   private String DSPrint;
   
-  public AutoCommand1() {
+  public MoveForward(DriveSubsystem _drive) {
     // Use addRequirements() here to declare subsystem dependencies.
-    
+    m_driveSubsystem = _drive;
+    addRequirements(_drive);
   }
 
   // Called when the command is initially scheduled.
@@ -44,9 +49,10 @@ public class AutoCommand1 extends CommandBase {
     System.out.println(time - startTime);
 
     if (time - startTime < 3) {
-      new RunCommand(() -> m_driveSubsystem.manualDrive(0.6, 0.6));
-    } else {
-      new RunCommand(() -> m_driveSubsystem.manualDrive(0,0));
+     m_driveSubsystem.manualDrive2(0.5,0);
+    } 
+    else {
+     m_driveSubsystem.manualDrive2(0,0);
     }
   }
 
